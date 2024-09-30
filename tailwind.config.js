@@ -4,6 +4,9 @@ export default {
   content: ["./src/**/*.{html,js,jsx}", "./index.html"],
   theme: {
     extend: {
+      fontSize: {
+        textThreeFiveXl: "2rem",
+      },
       colors: {
         mainBgTheme1: "hsl(222, 26%, 31%)",
         toggleBgTheme1: "hsl(223, 31%, 20%)",

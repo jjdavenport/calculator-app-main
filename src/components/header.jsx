@@ -29,13 +29,14 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex justify-between">
+      <header className="flex justify-between p-4">
         <h1>Calc</h1>
-        <div className="flex gap-4">
+        <label className="flex gap-4">
+          Theme
           <button onClick={() => setButton(1)}>1</button>
           <button onClick={() => setButton(2)}>2</button>
           <button onClick={() => setButton(3)}>3</button>
-        </div>
+        </label>
       </header>
     </>
   );
