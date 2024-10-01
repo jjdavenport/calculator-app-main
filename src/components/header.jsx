@@ -29,7 +29,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex justify-between p-4 one:text-whiteTextTheme1">
+      <header className="flex justify-between p-4 one:text-whiteTextTheme1 two:text-textGrayYellowTheme2 three:text-textLightYellowTheme3">
         <h1 className="lowercase">Calc</h1>
         <label className="flex gap-4">
           Theme
