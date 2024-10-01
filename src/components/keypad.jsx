@@ -2,7 +2,7 @@ import { evaluate } from "mathjs";
 
 const Keypad = ({ output, setOutput }) => {
   const number = (num) => {
-    setOutput((prev) => (prev === "0" ? num : prev + num));
+    setOutput((prev) => (prev === "0" || output === "0" ? num : prev + num));
   };
 
   const operator = (op) => {
@@ -20,27 +20,109 @@ const Keypad = ({ output, setOutput }) => {
 
   return (
     <>
-      <div className="grid grid-cols-4 grid-rows-4">
-        <button onClick={() => number("7")}>7</button>
-        <button onClick={() => number("8")}>8</button>
-        <button onClick={() => number("9")}>9</button>
-        <button onClick={() => minus("-")}>Del</button>
-        <button onClick={() => number("4")}>4</button>
-        <button onClick={() => number("5")}>5</button>
-        <button onClick={() => number("6")}>6</button>
-        <button onClick={() => operator("+")}>+</button>
-        <button onClick={() => number("1")}>1</button>
-        <button onClick={() => number("2")}>2</button>
-        <button onClick={() => number("3")}>3</button>
-        <button onClick={minus}>-</button>
-        <button onClick={() => number(".")}>.</button>
-        <button onClick={() => number("0")}>0</button>
-        <button onClick={() => operator("/")}>/</button>
-        <button onClick={() => operator("*")}>x</button>
-      </div>
-      <div className="flex justify-between p-10">
-        <button onClick={() => setOutput("0")}>Reset</button>
-        <button onClick={equals}>=</button>
+      <div className="grid grid-cols-4 grid-rows-5 gap-2 p-4 one:bg-toggleBgTheme1 one:text-white">
+        <button
+          className="rounded-lg border-b-4 bg-lightGrayOrangeKeyBgTheme1 one:border-b-grayOrangeKeyShadowTheme1 one:text-textGrayBlueTheme1"
+          onClick={() => number("7")}
+        >
+          7
+        </button>
+        <button
+          className="rounded-lg border-b-4 bg-lightGrayOrangeKeyBgTheme1 one:border-b-grayOrangeKeyShadowTheme1 one:text-textGrayBlueTheme1"
+          onClick={() => number("8")}
+        >
+          8
+        </button>
+        <button
+          className="rounded-lg border-b-4 bg-lightGrayOrangeKeyBgTheme1 one:border-b-grayOrangeKeyShadowTheme1 one:text-textGrayBlueTheme1"
+          onClick={() => number("9")}
+        >
+          9
+        </button>
+        <button className="bg-keyBgTheme1" onClick={() => minus("-")}>
+          Del
+        </button>
+        <button
+          className="rounded-lg border-b-4 bg-lightGrayOrangeKeyBgTheme1 one:border-b-grayOrangeKeyShadowTheme1 one:text-textGrayBlueTheme1"
+          onClick={() => number("4")}
+        >
+          4
+        </button>
+        <button
+          className="rounded-lg border-b-4 bg-lightGrayOrangeKeyBgTheme1 one:border-b-grayOrangeKeyShadowTheme1 one:text-textGrayBlueTheme1"
+          onClick={() => number("5")}
+        >
+          5
+        </button>
+        <button
+          className="rounded-lg border-b-4 bg-lightGrayOrangeKeyBgTheme1 one:border-b-grayOrangeKeyShadowTheme1 one:text-textGrayBlueTheme1"
+          onClick={() => number("6")}
+        >
+          6
+        </button>
+        <button
+          className="rounded-lg border-b-4 bg-lightGrayOrangeKeyBgTheme1 one:border-b-grayOrangeKeyShadowTheme1 one:text-textGrayBlueTheme1"
+          onClick={() => operator("+")}
+        >
+          +
+        </button>
+        <button
+          className="rounded-lg border-b-4 bg-lightGrayOrangeKeyBgTheme1 one:border-b-grayOrangeKeyShadowTheme1 one:text-textGrayBlueTheme1"
+          onClick={() => number("1")}
+        >
+          1
+        </button>
+        <button
+          className="rounded-lg border-b-4 bg-lightGrayOrangeKeyBgTheme1 one:border-b-grayOrangeKeyShadowTheme1 one:text-textGrayBlueTheme1"
+          onClick={() => number("2")}
+        >
+          2
+        </button>
+        <button
+          className="rounded-lg border-b-4 bg-lightGrayOrangeKeyBgTheme1 one:border-b-grayOrangeKeyShadowTheme1 one:text-textGrayBlueTheme1"
+          onClick={() => number("3")}
+        >
+          3
+        </button>
+        <button
+          className="rounded-lg border-b-4 bg-lightGrayOrangeKeyBgTheme1 one:border-b-grayOrangeKeyShadowTheme1 one:text-textGrayBlueTheme1"
+          onClick={minus}
+        >
+          -
+        </button>
+        <button
+          className="rounded-lg border-b-4 bg-lightGrayOrangeKeyBgTheme1 one:border-b-grayOrangeKeyShadowTheme1 one:text-textGrayBlueTheme1"
+          onClick={() => number(".")}
+        >
+          .
+        </button>
+        <button
+          className="rounded-lg border-b-4 bg-lightGrayOrangeKeyBgTheme1 one:border-b-grayOrangeKeyShadowTheme1 one:text-textGrayBlueTheme1"
+          onClick={() => number("0")}
+        >
+          0
+        </button>
+        <button
+          className="rounded-lg border-b-4 bg-lightGrayOrangeKeyBgTheme1 one:border-b-grayOrangeKeyShadowTheme1 one:text-textGrayBlueTheme1"
+          onClick={() => operator("/")}
+        >
+          /
+        </button>
+        <button
+          className="rounded-lg border-b-4 bg-lightGrayOrangeKeyBgTheme1 one:border-b-grayOrangeKeyShadowTheme1 one:text-textGrayBlueTheme1"
+          onClick={() => operator("*")}
+        >
+          x
+        </button>
+        <button
+          className="col-span-2 bg-keyBgTheme1"
+          onClick={() => setOutput("0")}
+        >
+          Reset
+        </button>
+        <button className="col-span-2" onClick={equals}>
+          =
+        </button>
       </div>
     </>
   );

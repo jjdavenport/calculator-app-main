@@ -4,6 +4,9 @@ export default {
   content: ["./src/**/*.{html,js,jsx}", "./index.html"],
   theme: {
     extend: {
+      fontFamily: {
+        custom: ["league spartan", "sans-serif"],
+      },
       fontSize: {
         textThreeFiveXl: "2rem",
       },

@@ -9,8 +9,8 @@ function App() {
 
   return (
     <>
-      <div>
-        <main className="text-textThreeFiveXl one:bg-mainBgTheme1 two:bg-mainBgTheme2 three:bg-mainBgTheme3">
+      <div className="font-custom">
+        <main className="flex flex-col gap-4 p-4 text-textThreeFiveXl font-bold one:bg-mainBgTheme1 two:bg-mainBgTheme2 three:bg-mainBgTheme3">
           <Header />
           <Output display={output} />
           <Keypad output={output} setOutput={setOutput} />

@@ -29,8 +29,8 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex justify-between p-4">
-        <h1>Calc</h1>
+      <header className="flex justify-between p-4 one:text-whiteTextTheme1">
+        <h1 className="lowercase">Calc</h1>
         <label className="flex gap-4">
           Theme
           <button onClick={() => setButton(1)}>1</button>
