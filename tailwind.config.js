@@ -11,6 +11,16 @@ export default {
         textThreeFiveXl: "2rem",
       },
       colors: {
+        hoverNumberKey1: "hsl(0, 0%, 100%)",
+        hoverKey1: "hsl(224, 51%, 76%)",
+        hoverEqual1: "hsl(6, 93%, 67%)",
+        hoverNumberKey2: "hsl(0, 0%, 100%)",
+        hoverKey2: "hsl(183, 40%, 55%)",
+        hoverEqual2: "hsl(25, 100%, 61%)",
+        hoverNumberKey3: "hsl(267, 54%, 44%)",
+        hoverKey3: "hsl(280, 56%, 44%)",
+        hoverEqual3: "hsl(177, 100%, 79%)",
+
         mainBgTheme1: "hsl(222, 26%, 31%)",
         toggleBgTheme1: "hsl(223, 31%, 20%)",
         screenBgTheme1: "hsl(224, 36%, 15%)",
