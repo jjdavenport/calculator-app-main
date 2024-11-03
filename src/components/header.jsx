@@ -30,8 +30,8 @@ const Header = () => {
   return (
     <>
       <header className="flex justify-between p-4 one:text-whiteTextTheme1 two:text-textGrayYellowTheme2 three:text-textLightYellowTheme3">
-        <h1 className="lowercase">Calc</h1>
-        <label className="flex items-end gap-4 text-lg uppercase tracking-wide">
+        <h1 className="~sm/md:~text-3xl/custom lowercase">Calc</h1>
+        <label className="~sm/md:~text-sm/custom flex items-end gap-6 uppercase tracking-widest">
           Theme
           <div className="flex">
             <label className="flex flex-col items-center">
@@ -41,7 +41,7 @@ const Header = () => {
                 onClick={() => setButton(1)}
               >
                 <div
-                  className={`${button === 1 ? "scale-125 one:bg-darkRedKeyShadowTheme1" : "bg-none"} h-4 w-4 rounded-full transition-transform duration-300 ease-in-out`}
+                  className={`${button === 1 ? "scale-125 one:bg-darkRedKeyShadowTheme1" : "bg-none"} h-3 w-3 rounded-full transition-transform duration-300 ease-in-out`}
                 ></div>
               </button>
             </label>
@@ -53,7 +53,7 @@ const Header = () => {
                 onClick={() => setButton(2)}
               >
                 <div
-                  className={`${button === 2 ? "scale-125 two:bg-orangeKeyBgTheme2" : "bg-none"} h-4 w-4 rounded-full transition-transform duration-300 ease-in-out`}
+                  className={`${button === 2 ? "scale-125 two:bg-orangeKeyBgTheme2" : "bg-none"} h-3 w-3 rounded-full transition-transform duration-300 ease-in-out`}
                 ></div>
               </button>
             </label>
@@ -65,7 +65,7 @@ const Header = () => {
                 onClick={() => setButton(3)}
               >
                 <div
-                  className={`${button === 3 ? "scale-125 bg-pureCyanKeyBgTheme3" : "bg-none"} h-4 w-4 rounded-full transition-transform duration-300 ease-in-out`}
+                  className={`${button === 3 ? "scale-125 bg-pureCyanKeyBgTheme3" : "bg-none"} h-3 w-3 rounded-full transition-transform duration-300 ease-in-out`}
                 ></div>
               </button>
             </label>

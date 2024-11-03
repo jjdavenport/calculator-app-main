@@ -9,8 +9,8 @@ function App() {
 
   return (
     <>
-      <div className="font-custom">
-        <main className="flex flex-col gap-4 p-4 text-textThreeFiveXl font-bold transition-colors duration-700 ease-in-out one:bg-mainBgTheme1 two:bg-mainBgTheme2 three:bg-mainBgTheme3">
+      <div className="flex h-full min-h-screen flex-col font-custom one:bg-mainBgTheme1 two:bg-mainBgTheme2 three:bg-mainBgTheme3">
+        <main className="text-custom flex flex-1 flex-col gap-6 p-4 font-bold transition-colors duration-700 ease-in-out">
           <Header />
           <Output display={output} />
           <Keypad output={output} setOutput={setOutput} />

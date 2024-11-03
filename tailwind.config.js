@@ -1,14 +1,19 @@
+import fluid, { extract, screens } from "fluid-tailwind";
 /** @type {import('tailwindcss').Config} */
 
 export default {
-  content: ["./src/**/*.{html,js,jsx}", "./index.html"],
+  content: {
+    files: ["./src/**/*.{html,js,jsx}", "./index.html"],
+    extract,
+  },
   theme: {
+    screens,
     extend: {
       fontFamily: {
         custom: ["league spartan", "sans-serif"],
       },
       fontSize: {
-        textThreeFiveXl: "2rem",
+        custom: "2rem",
       },
       colors: {
         hoverNumberKey1: "hsl(0, 0%, 100%)",
@@ -73,6 +78,7 @@ export default {
     },
   },
   plugins: [
+    fluid,
     function ({ addVariant }) {
       addVariant("one", `.one &`);
       addVariant("two", `.two &`);
