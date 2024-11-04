@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <>
-      <footer className="text-center text-xs">
+      <footer className="text-center text-xs one:text-whiteTextTheme1 two:text-textGrayYellowTheme2 three:text-textLightYellowTheme3">
         <p className="inline">
           Challenge by
           <a

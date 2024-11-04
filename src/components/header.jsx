@@ -29,19 +29,19 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex justify-between p-4 one:text-whiteTextTheme1 two:text-textGrayYellowTheme2 three:text-textLightYellowTheme3">
-        <h1 className="~sm/md:~text-3xl/custom lowercase">Calc</h1>
-        <label className="~sm/md:~text-sm/custom flex items-end gap-6 uppercase tracking-widest">
-          Theme
+      <header className="flex w-full justify-between ~sm/md:~p-4/2 one:text-whiteTextTheme1 two:text-textGrayYellowTheme2 three:text-textLightYellowTheme3 md:items-center">
+        <h1 className="lowercase ~sm/md:~text-3xl/custom">Calc</h1>
+        <label className="flex items-end gap-6 text-sm uppercase tracking-widest">
+          <span className="~sm/md:~pb-0/1">Theme</span>
           <div className="flex">
             <label className="flex flex-col items-center">
               1
               <button
-                className="rounded-l-full p-2 transition-colors duration-300 one:bg-toggleBgTheme1 two:bg-toggleBgTheme2 three:bg-toggleBgTheme3"
+                className="rounded-l-full transition-colors duration-300 ~sm/md:~p-1/2 one:bg-toggleBgTheme1 two:bg-toggleBgTheme2 three:bg-toggleBgTheme3"
                 onClick={() => setButton(1)}
               >
                 <div
-                  className={`${button === 1 ? "scale-125 one:bg-darkRedKeyShadowTheme1" : "bg-none"} h-3 w-3 rounded-full transition-transform duration-300 ease-in-out`}
+                  className={`${button === 1 ? "scale-125 one:bg-darkRedKeyShadowTheme1" : "bg-none"} h-4 w-4 rounded-full transition-transform duration-300 ease-in-out`}
                 ></div>
               </button>
             </label>
@@ -49,11 +49,11 @@ const Header = () => {
             <label className="flex flex-col items-center">
               2
               <button
-                className="p-2 transition-colors duration-300 one:bg-toggleBgTheme1 two:bg-toggleBgTheme2 three:bg-toggleBgTheme3"
+                className="transition-colors duration-300 ~sm/md:~p-1/2 one:bg-toggleBgTheme1 two:bg-toggleBgTheme2 three:bg-toggleBgTheme3"
                 onClick={() => setButton(2)}
               >
                 <div
-                  className={`${button === 2 ? "scale-125 two:bg-orangeKeyBgTheme2" : "bg-none"} h-3 w-3 rounded-full transition-transform duration-300 ease-in-out`}
+                  className={`${button === 2 ? "scale-125 two:bg-orangeKeyBgTheme2" : "bg-none"} h-4 w-4 rounded-full transition-transform duration-300 ease-in-out`}
                 ></div>
               </button>
             </label>
@@ -61,11 +61,11 @@ const Header = () => {
             <label className="flex flex-col items-center">
               3
               <button
-                className="rounded-r-full p-2 transition-colors duration-300 one:bg-toggleBgTheme1 two:bg-toggleBgTheme2 three:bg-toggleBgTheme3"
+                className="rounded-r-full transition-colors duration-300 ~sm/md:~p-1/2 one:bg-toggleBgTheme1 two:bg-toggleBgTheme2 three:bg-toggleBgTheme3"
                 onClick={() => setButton(3)}
               >
                 <div
-                  className={`${button === 3 ? "scale-125 bg-pureCyanKeyBgTheme3" : "bg-none"} h-3 w-3 rounded-full transition-transform duration-300 ease-in-out`}
+                  className={`${button === 3 ? "scale-125 bg-pureCyanKeyBgTheme3" : "bg-none"} h-4 w-4 rounded-full transition-transform duration-300 ease-in-out`}
                 ></div>
               </button>
             </label>
