@@ -5,7 +5,7 @@ import Footer from "./components/footer";
 import { useState } from "react";
 
 function App() {
-  const [output, setOutput] = useState(0);
+  const [output, setOutput] = useState("0");
 
   return (
     <>

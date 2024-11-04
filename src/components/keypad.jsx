@@ -10,11 +10,15 @@ const Keypad = ({ output, setOutput }) => {
   };
 
   const minus = () => {
-    setOutput((prev) => prev + "-");
+    setOutput((prev) => {
+      return /[+\-*/]$/.test(prev) ? prev.slice(0, -1) + "-" : prev + "-";
+    });
   };
 
   const add = () => {
-    setOutput((prev) => prev + "+");
+    setOutput((prev) => {
+      return /[+\-*/]$/.test(prev) ? prev.slice(0, -1) + "+" : prev + "+";
+    });
   };
 
   const dot = () => {
@@ -22,11 +26,15 @@ const Keypad = ({ output, setOutput }) => {
   };
 
   const multiply = () => {
-    setOutput((prev) => prev + "*");
+    setOutput((prev) => {
+      return /[+\-*/]$/.test(prev) ? prev.slice(0, -1) + "*" : prev + "*";
+    });
   };
 
   const divide = () => {
-    setOutput((prev) => prev + "/");
+    setOutput((prev) => {
+      return /[+\-*/]$/.test(prev) ? prev.slice(0, -1) + "/" : prev + "/";
+    });
   };
 
   const sum = () => {
